@@ -12,8 +12,21 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new(task_params)
+    if @task.save!
+      logger.debug("if文の中に入りました")
+      redirect_to tasks_path, notice: "タスクを追加しました！"
+
+    else
+      render :new
+    end
   end
 
   def destroy
+  end
+
+  private
+  def task_params
+    params.require(:task).permit(:name, :description)
   end
 end
