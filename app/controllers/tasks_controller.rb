@@ -14,6 +14,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save!
+      # binding.pry
       logger.debug("if文の中に入りました")
       redirect_to tasks_path, notice: "タスクを追加しました！"
 
@@ -27,6 +28,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :taskImage)
   end
 end

@@ -12,3 +12,6 @@
     <td><%= @task.description %></td>
   </tr>
 </table>
+<% if @task.taskImage? %>
+<%= image_tag @task.taskImage.url %>
+<% end %>
