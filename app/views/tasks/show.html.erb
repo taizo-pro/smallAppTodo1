@@ -1,2 +1,14 @@
 <h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>タスク名</th>
+    <th>タスクの説明</th>
+  </tr>
+  <tr>
+    <td><%= @task.id %></td>
+    <td><%= @task.name %></td>
+    <td><%= @task.description %></td>
+  </tr>
+</table>
