@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'carrierwave', '~> 2.0'
 
+gem 'pry-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
